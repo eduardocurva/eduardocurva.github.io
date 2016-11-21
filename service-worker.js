@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var dataCacheName = 'eduardocurva-messages-data';
-var cacheName = 'eduardocurva-messages';
+var dataCacheName = 'eduardocurva-messages-data.v0.1';
+var cacheName = 'eduardocurva-messages.v0.1';
 var filesToCache = [
   '/',
   '/index.html',
@@ -58,8 +58,7 @@ self.addEventListener('activate', function(e) {
 });
 
 self.addEventListener('fetch', function(e) {
-  console.log('[Service Worker] Fetch', e.request.url);
-  var dataUrl = 'https://query.yahooapis.com/v1/public/yql';
+  var dataUrl = ''; //todo
   if (e.request.url.indexOf(dataUrl) > -1) {
     /*
      * When the request URL contains dataUrl, the app is asking for fresh

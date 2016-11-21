@@ -160,6 +160,8 @@
     if (this.auth.currentUser) {
       return true;
     }
+    
+    app.showSnackbar('You are not logged in');
   }
 
   app.AddMessage = function () {
@@ -175,8 +177,6 @@
 
     app.saveMessages();
 
-    app.showSnackbar('Message added!');
-
     if (txtMessage.value && this.checkSignedInWithMessage()) {
       var currentUser = this.auth.currentUser;
 
@@ -188,6 +188,7 @@
       }).then(function () {
         
         txtMessage.value = "";
+        app.showSnackbar('Message added!');
       
     }.bind(this)).catch(function (error) {
         console.error('Error writing new message to Firebase Database', error);
