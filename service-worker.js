@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var dataCacheName = 'eduardocurva-messages-data.v0.1';
+var dataCacheName = 'eduardocurva-messages-data.v0.1  ';
 var cacheName = 'eduardocurva-messages.v0.1';
 var filesToCache = [
   '/',
